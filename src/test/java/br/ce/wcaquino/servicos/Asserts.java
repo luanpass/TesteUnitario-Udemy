@@ -20,6 +20,5 @@ public class Asserts {
         Filme f1 = new Filme();
         assertEquals(u1,u2);
         assertSame(u1,u1);
-        assertThat();
     }
 }
