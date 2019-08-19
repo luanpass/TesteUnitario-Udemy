@@ -13,9 +13,14 @@ import static br.ce.wcaquino.utils.DataUtils.adicionarDias;
 import static br.ce.wcaquino.utils.DataUtils.isMesmaData;
 import static org.hamcrest.CoreMatchers.is;
 
+
+//Tratamento de Exceptions
+
 public class TestsExceptions {
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
+
+    private static Integer integer = new Integer(0);
 
     private Usuario usuario;
     private Filme filme;
@@ -42,7 +47,8 @@ public class TestsExceptions {
     //Método roda antes de cada método Teste
     @Before
     public void setUp() throws Exception {
-        System.out.println("Before Method");
+        integer ++;
+        System.out.println("Before Method for the " + integer + "º time");
         usuario = new Usuario("Luan");
         filme = new Filme("Star Wars 4",new Integer(1),new Double(25.0));
         service = new LocacaoService();
@@ -54,50 +60,6 @@ public class TestsExceptions {
         System.out.println("After Method");
     }
 
-    @Test
-    public void alugarFilmesTestNotNull() throws Exception {
-
-        //ação
-        locacao = service.alugarFilme(usuario,filme);
-        //verificacao
-        Assert.assertTrue(locacao.getFilme().getNome() != null);
-        Assert.assertTrue(isMesmaData(locacao.getDataRetorno(),adicionarDias(locacao.getDataLocacao(),1)));
-
-    }
-
-    @Test(expected = Exception.class)
-    public void testElegant() throws Exception{
-        //ação
-        filme.setEstoque(0);
-        locacao = service.alugarFilme(usuario,filme);
-        //verificacao
-        Assert.assertTrue(locacao.getFilme().getNome() != null);
-        Assert.assertTrue(isMesmaData(locacao.getDataRetorno(),adicionarDias(locacao.getDataLocacao(),1)));
-    }
-
-    @Test
-    public void testRubusto() throws Exception{
-        //ação
-        filme.setEstoque(0);
-
-        try {
-            locacao = service.alugarFilme(usuario,filme);
-            Assert.fail();
-        } catch (Exception e) {
-            Assert.assertThat(e.getMessage(),is("Estoque cannot be zero"));
-        }
-    }
-
-    @Test
-    public void testNovo() throws Exception{
-        //ação
-        filme.setEstoque(0);
-
-        expectedException.expect(Exception.class);
-        expectedException.expectMessage("Estoque cannot be zero");
-
-        locacao = service.alugarFilme(usuario,filme);
-    }
 
 //    Filme com estoque zerado
 //    Usuario Populado.
@@ -135,7 +97,7 @@ public class TestsExceptions {
     public void usuarioNullTestNovo() throws FilmeSemEstoqueException, LocacaoException {
 
         expectedException.expect(LocacaoException.class);
-        expectedException.expectMessage("Usuario não pode ser vazio");
+        expectedException.expectMessage("Usuario cannot be null");
 
         locacao= service.alugarFilme(usuarioNull,filme);
     }
