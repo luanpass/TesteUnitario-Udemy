@@ -8,10 +8,12 @@ import br.ce.wcaquino.exceptions.LocacaoException;
 import org.junit.*;
 import org.junit.rules.ExpectedException;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static br.ce.wcaquino.utils.DataUtils.adicionarDias;
 import static br.ce.wcaquino.utils.DataUtils.isMesmaData;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
 
 public class LocacaoServiceTest {
 
@@ -19,7 +21,7 @@ public class LocacaoServiceTest {
     public ExpectedException expectedException = ExpectedException.none();
 
     private Usuario usuario;
-    private Filme filme;
+    private List <Filme> filmes = Arrays.asList(new Filme("Star Wars 4",new Integer(1),new Double(25.0)));
     private LocacaoService service;
     private Locacao locacao;
 
@@ -38,7 +40,6 @@ public class LocacaoServiceTest {
     @Before
     public void setUp() throws Exception {
         usuario = new Usuario("Luan");
-        filme = new Filme("Star Wars 4",new Integer(1),new Double(25.0));
         service = new LocacaoService();
         locacao = new Locacao();
         integer ++;
@@ -49,9 +50,9 @@ public class LocacaoServiceTest {
     public void alugarFilmesTestNotNull() throws Exception {
 
         //ação
-        locacao = service.alugarFilme(usuario,filme);
+        locacao = service.alugarFilme(usuario, filmes);
         //verificacao
-        Assert.assertTrue(locacao.getFilme().getNome() != null);
+        Assert.assertTrue(locacao.getFilme().get(0).getNome() != null);
         Assert.assertTrue(isMesmaData(locacao.getDataRetorno(),adicionarDias(locacao.getDataLocacao(),1)));
 
     }
@@ -60,20 +61,20 @@ public class LocacaoServiceTest {
     @Test(expected = Exception.class)
     public void testElegant() throws Exception{
         //ação
-        filme.setEstoque(0);
-        locacao = service.alugarFilme(usuario,filme);
+        filmes.get(0).setEstoque(0);
+        locacao = service.alugarFilme(usuario, filmes);
         //verificacao
-        Assert.assertTrue(locacao.getFilme().getNome() != null);
+        Assert.assertTrue(locacao.getFilme().get(0).getNome() != null);
         Assert.assertTrue(isMesmaData(locacao.getDataRetorno(),adicionarDias(locacao.getDataLocacao(),1)));
     }
 
     @Test
     public void testRubusto() throws Exception{
         //ação
-        filme.setEstoque(0);
+        filmes.get(0).setEstoque(0);
 
         try {
-            locacao = service.alugarFilme(usuario,filme);
+            locacao = service.alugarFilme(usuario, filmes);
             Assert.fail("Não deveria funcionar");
         } catch (Exception e) {
             Assert.assertThat(e.getMessage(),is("Estoque cannot be zero"));
@@ -83,22 +84,23 @@ public class LocacaoServiceTest {
     @Test
     public void testNovo() throws Exception{
         //ação
-        filme.setEstoque(0);
+        filmes.get(0).setEstoque(0);
 
         expectedException.expect(Exception.class);
         expectedException.expectMessage("Estoque cannot be zero");
 
-        locacao = service.alugarFilme(usuario,filme);
+        locacao = service.alugarFilme(usuario, filmes);
     }
 
     @Test(expected = FilmeSemEstoqueException.class)
     public void filmeSemEstoqueExceptionTestElegant() throws FilmeSemEstoqueException, LocacaoException {
 
         //ação
-        filme.setEstoque(0);
-        locacao = service.alugarFilme(usuario,filme);
+        filmes.get(0).setEstoque(0);
+
+        locacao = service.alugarFilme(usuario, filmes);
         //verificacao
-        Assert.assertTrue(locacao.getFilme().getNome() != null);
+        Assert.assertTrue(locacao.getFilme().get(0).getNome() != null);
         Assert.assertTrue(isMesmaData(locacao.getDataRetorno(),adicionarDias(locacao.getDataLocacao(),1)));
     }
 }

@@ -9,6 +9,9 @@ import br.ce.wcaquino.exceptions.LocacaoException;
 import org.junit.*;
 import org.junit.rules.ExpectedException;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static br.ce.wcaquino.utils.DataUtils.adicionarDias;
 import static br.ce.wcaquino.utils.DataUtils.isMesmaData;
 import static org.hamcrest.CoreMatchers.is;
@@ -23,10 +26,10 @@ public class TestsExceptions {
     private static Integer integer = new Integer(0);
 
     private Usuario usuario;
-    private Filme filme;
+    private List<Filme> filmes;
     private LocacaoService service;
     private Locacao locacao;
-    private Filme filmeNull;
+    private List<Filme> filmeNull;
     private Usuario usuarioNull;
 
     //Método roda antes da classe ser instaciada.
@@ -50,7 +53,7 @@ public class TestsExceptions {
         integer ++;
         System.out.println("Before Method for the " + integer + "º time");
         usuario = new Usuario("Luan");
-        filme = new Filme("Star Wars 4",new Integer(1),new Double(25.0));
+        filmes = Arrays.asList( new Filme("Star Wars 4",new Integer(1),new Double(25.0)));
         service = new LocacaoService();
         locacao = new Locacao();
     }
@@ -68,10 +71,10 @@ public class TestsExceptions {
     public void filmeSemEstoqueExceptionTestElegant() throws FilmeSemEstoqueException, LocacaoException {
 
         //ação
-        filme.setEstoque(0);
-        locacao = service.alugarFilme(usuario,filme);
+        filmes.get(0).setEstoque(0);
+        locacao = service.alugarFilme(usuario, filmes);
         //verificacao
-        Assert.assertTrue(locacao.getFilme().getNome() != null);
+        Assert.assertTrue(locacao.getFilme().get(0).getNome() != null);
         Assert.assertTrue(isMesmaData(locacao.getDataRetorno(),adicionarDias(locacao.getDataLocacao(),1)));
     }
 
@@ -99,7 +102,7 @@ public class TestsExceptions {
         expectedException.expect(LocacaoException.class);
         expectedException.expectMessage("Usuario cannot be null");
 
-        locacao= service.alugarFilme(usuarioNull,filme);
+        locacao= service.alugarFilme(usuarioNull, filmes);
     }
 }
 
