@@ -8,6 +8,7 @@ import br.ce.wcaquino.exceptions.LocacaoException;
 import org.junit.*;
 import org.junit.rules.ExpectedException;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class LocacaoServiceTest {
     public ExpectedException expectedException = ExpectedException.none();
 
     private Usuario usuario;
-    private List <Filme> filmes = Arrays.asList(new Filme("Star Wars 4",new Integer(1),new Double(25.0)));
+    private List <Filme> filmes;
     private LocacaoService service;
     private Locacao locacao;
 
@@ -39,6 +40,7 @@ public class LocacaoServiceTest {
 
     @Before
     public void setUp() throws Exception {
+        filmes = Arrays.asList(new Filme("Logan",new Integer(20),25.0));
         usuario = new Usuario("Luan");
         service = new LocacaoService();
         locacao = new Locacao();
@@ -58,8 +60,8 @@ public class LocacaoServiceTest {
     }
 
 
-    @Test(expected = Exception.class)
-    public void testElegant() throws Exception{
+    @Test(expected = FilmeSemEstoqueException.class)
+    public void testElegant() throws FilmeSemEstoqueException, LocacaoException{
         //ação
         filmes.get(0).setEstoque(0);
         locacao = service.alugarFilme(usuario, filmes);
@@ -83,11 +85,12 @@ public class LocacaoServiceTest {
 
     @Test
     public void testNovo() throws Exception{
-        //ação
-        filmes.get(0).setEstoque(0);
 
         expectedException.expect(Exception.class);
         expectedException.expectMessage("Estoque cannot be zero");
+        //ação
+        filmes.get(0).setEstoque(0);
+
 
         locacao = service.alugarFilme(usuario, filmes);
     }
@@ -102,5 +105,43 @@ public class LocacaoServiceTest {
         //verificacao
         Assert.assertTrue(locacao.getFilme().get(0).getNome() != null);
         Assert.assertTrue(isMesmaData(locacao.getDataRetorno(),adicionarDias(locacao.getDataLocacao(),1)));
+    }
+
+    @Test
+    public void filmePromocaoEscalonavel() throws FilmeSemEstoqueException, LocacaoException{
+
+        for(int i=0; i<=6; i++){
+            filmes = Arrays.asList(new Filme("Logan",new Integer(20),25.0));
+            locacao = service.alugarFilme(usuario,filmes);
+            Integer tamanho = filmes.size();
+
+            switch (tamanho.intValue()){
+                case 1:
+                    Assert.assertEquals(25.0,locacao.getValor(),0.1);
+                    break;
+                case 2:
+                    Assert.assertEquals(50.0,locacao.getValor(),0.1);
+                    break;
+                case 3:
+                    Assert.assertEquals(68.75,locacao.getValor(),0.1);
+                    break;
+                case 4:
+                    Assert.assertEquals(81.25,locacao.getValor(),0.1);
+                    break;
+                case 5:
+                    Assert.assertEquals(87.5,locacao.getValor(),0.1);
+                    break;
+                case 6:
+                    Assert.assertEquals(87.5,locacao.getValor(),0.1);
+            }
+
+        }
+
+
+    }
+
+    @Test
+    public void naoAceitaFilmeNoDomingo(){
+
     }
 }

@@ -104,5 +104,6 @@ public class TestsExceptions {
 
         locacao= service.alugarFilme(usuarioNull, filmes);
     }
+
 }
 
