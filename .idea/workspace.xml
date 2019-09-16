@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a54c1f9-3252-4e47-b375-911e1e22bbdb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ce/wcaquino/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/ce/wcaquino/parameter/AlugaDisconto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ce/wcaquino/entidades/Locacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ce/wcaquino/entidades/Locacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ce/wcaquino/servicos/LocacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ce/wcaquino/servicos/LocacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/ce/wcaquino/servicos/LocacaoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/ce/wcaquino/servicos/LocacaoServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/ce/wcaquino/servicos/TestsExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/ce/wcaquino/servicos/TestsExceptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/ce/wcaquino/entidades/Locacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/ce/wcaquino/entidades/Locacao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/ce/wcaquino/servicos/LocacaoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/ce/wcaquino/servicos/LocacaoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/br/ce/wcaquino/servicos/LocacaoServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/ce/wcaquino/servicos/LocacaoServiceTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,25 +31,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="35" />
+          <entry key="java" value="36" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="35" />
+          <entry key="JAVA" value="36" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6926" />
+          <entry key="java" value="7999" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6926" />
+          <entry key="JAVA" value="7999" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -67,8 +60,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ce/wcaquino/servicos/LocacaoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+            <state relative-caret-position="390">
+              <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-end-line="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/br/ce/wcaquino/parameter/AlugaDisconto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="61" column="101" selection-start-line="61" selection-start-column="101" selection-end-line="61" selection-end-column="101" />
+              <folding>
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#725#726#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/br/ce/wcaquino/servicos/TestsExceptions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="-14">
               <caret line="70" column="90" lean-forward="true" selection-start-line="70" selection-start-column="90" selection-end-line="70" selection-end-column="90" />
             </state>
           </provider>
@@ -112,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/br/ce/wcaquino/servicos/LocacaoServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1171">
-              <caret line="134" column="44" selection-start-line="134" selection-start-column="44" selection-end-line="134" selection-end-column="44" />
+            <state relative-caret-position="406">
+              <caret line="131" column="40" lean-forward="true" selection-start-line="131" selection-start-column="40" selection-end-line="131" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -185,6 +191,7 @@
         <option value="$PROJECT_DIR$/src/main/java/br/ce/wcaquino/entidades/Locacao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ce/wcaquino/servicos/LocacaoService.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/ce/wcaquino/servicos/LocacaoServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/ce/wcaquino/parameter/AlugaDisconto.java" />
       </list>
     </option>
   </component>
@@ -303,6 +310,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wcaquino" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestesUnitarios" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestesUnitarios" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wcaquino" type="462c0819:PsiDirectoryNode" />
               <item name="servicos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -314,7 +330,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568591999028" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568597100466" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../meusProjetos/Origem_1998" />
@@ -345,7 +361,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Test">
+  <component name="RunManager" selected="JUnit.AlugaDisconto">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.ce.wcaquino.main.Main" />
       <module name="TestesUnitarios" />
@@ -359,16 +375,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Asserts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AlugaDisconto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestesUnitarios" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.ce.wcaquino.servicos.*" />
+          <option name="PATTERN" value="br.ce.wcaquino.parameter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.ce.wcaquino.servicos" />
-      <option name="MAIN_CLASS_NAME" value="br.ce.wcaquino.servicos.Asserts" />
+      <option name="PACKAGE_NAME" value="br.ce.wcaquino.parameter" />
+      <option name="MAIN_CLASS_NAME" value="br.ce.wcaquino.parameter.AlugaDisconto" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -430,18 +446,18 @@
     <list>
       <item itemvalue="JUnit.Test" />
       <item itemvalue="JUnit.TestsExceptions" />
-      <item itemvalue="JUnit.Asserts" />
       <item itemvalue="JUnit.CalculadoraTest" />
       <item itemvalue="JUnit.LocacaoServiceTest.filmePromocaoEscalonavel" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.AlugaDisconto" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AlugaDisconto" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.LocacaoServiceTest.filmePromocaoEscalonavel" />
         <item itemvalue="JUnit.TestsExceptions" />
         <item itemvalue="JUnit.CalculadoraTest" />
-        <item itemvalue="JUnit.Asserts" />
       </list>
     </recent_temporary>
   </component>
@@ -463,44 +479,44 @@
       <workItem from="1566099346987" duration="598000" />
       <workItem from="1566148229421" duration="15205000" />
       <workItem from="1566744211832" duration="4744000" />
-      <workItem from="1568559946957" duration="16634000" />
+      <workItem from="1568559946957" duration="21107000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test - 2019.09.15 at 18h 53m 26s.xml">
-      <configuration name="Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test - 2019.09.15 at 18h 53m 58s.xml">
-      <configuration name="Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test - 2019.09.15 at 18h 54m 36s.xml">
-      <configuration name="Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test - 2019.09.15 at 18h 55m 02s.xml">
-      <configuration name="Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test - 2019.09.15 at 18h 56m 33s.xml">
-      <configuration name="Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test - 2019.09.15 at 18h 57m 36s.xml">
-      <configuration name="Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test - 2019.09.15 at 18h 57m 58s.xml">
-      <configuration name="Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test - 2019.09.15 at 18h 58m 39s.xml">
-      <configuration name="Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LocacaoServiceTest_filmePromocaoEscalonavel - 2019.09.15 at 19h 03m 02s.xml">
-      <configuration name="LocacaoServiceTest.filmePromocaoEscalonavel" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Test - 2019.09.15 at 20h 42m 42s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AlugaDisconto - 2019.09.15 at 22h 08m 14s.xml">
+      <configuration name="AlugaDisconto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlugaDisconto - 2019.09.15 at 22h 09m 05s.xml">
+      <configuration name="AlugaDisconto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlugaDisconto - 2019.09.15 at 22h 10m 34s.xml">
+      <configuration name="AlugaDisconto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlugaDisconto - 2019.09.15 at 22h 12m 57s.xml">
+      <configuration name="AlugaDisconto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlugaDisconto - 2019.09.15 at 22h 18m 10s.xml">
+      <configuration name="AlugaDisconto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlugaDisconto - 2019.09.15 at 22h 18m 25s.xml">
+      <configuration name="AlugaDisconto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlugaDisconto - 2019.09.15 at 22h 18m 56s.xml">
+      <configuration name="AlugaDisconto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlugaDisconto - 2019.09.15 at 22h 19m 27s.xml">
+      <configuration name="AlugaDisconto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlugaDisconto - 2019.09.15 at 22h 19m 53s.xml">
+      <configuration name="AlugaDisconto" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46470000" />
+    <option name="totallyTimeSpent" value="50943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -511,14 +527,14 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.2241284" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2241284" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32952693" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.22918919" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.22918919" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3935135" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
@@ -771,10 +787,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/ce/wcaquino/servicos/TestsExceptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="70" column="90" lean-forward="true" selection-start-line="70" selection-start-column="90" selection-end-line="70" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/ce/wcaquino/servicos/LocacaoServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="131" column="40" lean-forward="true" selection-start-line="131" selection-start-column="40" selection-end-line="131" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ce/wcaquino/servicos/LocacaoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+        <state relative-caret-position="390">
+          <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-end-line="61" />
         </state>
       </provider>
     </entry>
@@ -788,17 +818,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/ce/wcaquino/servicos/LocacaoServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/ce/wcaquino/parameter/AlugaDisconto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1171">
-          <caret line="134" column="44" selection-start-line="134" selection-start-column="44" selection-end-line="134" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/ce/wcaquino/servicos/TestsExceptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="70" column="90" lean-forward="true" selection-start-line="70" selection-start-column="90" selection-end-line="70" selection-end-column="90" />
+        <state relative-caret-position="301">
+          <caret line="61" column="101" selection-start-line="61" selection-start-column="101" selection-end-line="61" selection-end-column="101" />
+          <folding>
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
